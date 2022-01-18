@@ -100,3 +100,8 @@ jobs:
           file: ./artifact/firmware/*
           tag: ${{ github.ref }}
           file_glob: true
+          
+      - name: trans2Cow
+        run: |
+          curl -sL https://git.io/cowtransfer | sh 
+          ./cowtransfer-uploader -s ./bin/targets/
