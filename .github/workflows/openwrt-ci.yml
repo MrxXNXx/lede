@@ -44,11 +44,13 @@ jobs:
           git clone https://github.com/kenzok8/small.git 
           cp -R ./small/* ./package/
           rm -rf ./small
+          ll ./package/
 
       - name: Update feeds
         run: |
           ./scripts/feeds update -a
           ./scripts/feeds install -a
+          ll ./package/
 
         
 
