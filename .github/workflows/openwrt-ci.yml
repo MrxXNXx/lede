@@ -41,8 +41,9 @@ jobs:
 
       - name: add package
         run: |
-          git clone https://github.com/kenzok8/small.git ./package/
-          ll ./package/
+          git clone https://github.com/kenzok8/small.git 
+          cp -R ./small/* ./package/
+          rm -rf ./small
 
       - name: Update feeds
         run: |
